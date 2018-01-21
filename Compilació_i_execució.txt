@@ -1,0 +1,41 @@
+Per a compilar tots els fitxers font i les classes sols és necessari fer la comanda "make", i el makefile ja s'encarrega de generar-los.
+
+Primerament, per a fer més còmode el testeig hem distribuit els directoris de tal manera que dins el subdirectori "Documents" hi haurà tots els txt dels documents
+per a la seva utilització.
+
+Per a l'execució s'ha de seguir el seguent patró:
+
+*Execució de Jsim
+comanda:
+
+./Jsim Documents/<nom_document1> Documents/<nom_document2>
+
+on <nom_document1> i <nom_document2> són arxius de text localitzats al subdirectori "Documents".
+
+*Execució de MinHash_Similarity
+comanda:
+
+./MinHash_Similarity Documents/<nom_document1> Documents/<nom_document2> ... Documents/<nom_documentsN>
+
+*Execució de LSH o LSH_var
+comanda:
+
+./LSH Documents/<nom_document1> Documents/<nom_document2> ... Documents/<nom_documentsN>
+
+./LSH_var Documents/<nom_document1> Documents/<nom_document2> ... Documents/<nom_documentsN>
+
+
+Programa per generar aleatòriament permutacions d'un document i el seu funcionament:
+
+Malgrat que ja hem inclòs en el subdirectori "Documents" dos textos originals i permutacions d'aquests, es pot
+generar més permutacions, o es permet fer permutacions d'altres documents de la seguent manera:
+
+Dins el subdirectori "Documents" es localitza un fitxer "Permuta.jar", que és un programa escrit en java, que es pot executar via comanda:
+
+java -jar Permuta.jar
+
+la pròpia interfície del programa permet saber què cal introduir, però principalment el funcionament és el següent.
+
+Es demana seleccionar el nom d'un fitxer del directori, i després introduir la quantitat de de permutacions que es dessitgen.
+
+Posteriorment generarà tantes permutacions com s'hagi introduït sota el nom <fitxer_original>_permuta_<n>.txt.
